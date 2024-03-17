@@ -1,10 +1,11 @@
+push!(LOAD_PATH,"../src/")
 using Documenter
-using alt-doc
+using AltDoc
 
 makedocs(
-    sitename = "alt-doc",
+    sitename = "altdoc",
     format = Documenter.HTML(),
-    modules = [alt-doc]
+    modules = [AltDoc]
 )
 
 # Documenter can also automatically deploy documentation to gh-pages.

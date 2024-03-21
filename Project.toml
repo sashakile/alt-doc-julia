@@ -3,8 +3,12 @@ uuid = "73b6f946-ff74-4e48-9cc5-11d5f13a3510"
 authors = ["sasha"]
 version = "0.1.0"
 
-[deps]
+[extras]
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 DocumenterTools = "35a29f4d-8980-5a13-9543-d66fff28ecb8"
 OhMyREPL = "5fb14364-9ced-5910-84b2-373655c76a03"
 PkgTemplates = "14b8a8f1-9102-5b29-a752-f990bacb7fe1"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

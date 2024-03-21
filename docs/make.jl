@@ -7,10 +7,23 @@ makedocs(
     format = Documenter.HTML(),
     modules = [AltDoc]
 )
+DocMeta.setdocmeta!(AltDoc, :DocTestSetup, :(using AltDoc); recursive=true)
 
-# Documenter can also automatically deploy documentation to gh-pages.
-# See "Hosting Documentation" and deploydocs() in the Documenter manual
-# for more information.
-#=deploydocs(
-    repo = "<repository url>"
-)=#
+makedocs(;
+    modules=[AltDoc],
+    authors="contributors",
+    sitename="AltDoc.jl",
+    format=Documenter.HTML(;
+        canonical="https://sashakile.github.io/alt-doc-julia",
+        edit_link="main",
+        assets=String[],
+    ),
+    pages=[
+        "Home" => "index.md",
+    ],
+)
+
+deploydocs(;
+    repo="github.com/sashakile/alt-doc-julia.jl",
+    devbranch="main",
+)
